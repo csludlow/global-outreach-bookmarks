@@ -16,7 +16,7 @@ Double-click `index.html` in Finder. This version deliberately uses no runtime o
 
 ## Deploy
 
-This is a static site and can be deployed to Netlify, Vercel, GitHub Pages, or any static host. Publish the project folder, retaining the `src` directory and its `assets` subfolder. No server runtime is required.
+This is a static site and can be deployed to any static web host. Publish the generated `dist` folder; no server runtime is required.
 
 ## Production notes
 
