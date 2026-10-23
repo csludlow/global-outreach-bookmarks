@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#173e42" />
+    <title>Global Outreach | Bookmark Studio</title>
+    <link rel="stylesheet" href="src/styles.css?v=6" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Global Outreach Bookmark Studio">
+          <span class="brand-mark">GO</span>
+          <span><strong>GLOBAL OUTREACH</strong><small>CEDARVILLE UNIVERSITY</small></span>
+        </a>
+        <span class="production-badge"><i></i> Print-ready studio</span>
+      </header>
+
+      <section class="hero" id="top">
+        <div>
+          <p class="eyebrow">Fundraising materials</p>
+          <h1>Create your campaign bookmark.</h1>
+          <p class="lede">Personalize the details, choose a look, and send a press-ready file to Print Services.</p>
+        </div>
+        <p class="print-spec">2.5 × 8 in<br /><span>2-page PDF • full bleed</span></p>
+      </section>
+
+      <div class="workspace">
+        <section class="editor" aria-label="Bookmark editor">
+          <div class="section-heading">
+            <span class="step">1</span><div><h2>Your details</h2><p>These fields are used on the printed bookmark.</p></div>
+          </div>
+          <label>Student name<input id="studentName" maxlength="42" value="First and Last Name" autocomplete="name" /></label>
+          <label>Trip location<input id="location" maxlength="38" value="Portugal Trip" /></label>
+          <div class="two-up">
+            <label>Departure<input id="departure" type="date" value="2026-02-04" /></label>
+            <label>Return<input id="returnDate" type="date" value="2026-02-10" /></label>
+          </div>
+
+          <div class="section-heading appearance-heading">
+            <span class="step">2</span><div><h2>Choose a style</h2><p>More choices can be added as new program templates are approved.</p></div>
+          </div>
+          <div class="template-picker" role="radiogroup" aria-label="Bookmark background">
+            <button class="template-card active" data-template="village" role="radio" aria-checked="true"><span class="swatch village"></span><strong>Village</strong><small>Original rural background</small></button>
+            <button class="template-card" data-template="city" role="radio" aria-checked="false"><span class="swatch city"></span><strong>City</strong><small>Urban outreach background</small></button>
+          </div>
+
+          <div class="section-heading photo-heading">
+            <span class="step">3</span><div><h2>Optional portrait</h2><p>JPG or PNG, square photos work best.</p></div>
+          </div>
+          <label class="upload-control" for="portrait"><span><strong>Upload a photo</strong><small id="photoStatus">No photo selected</small></span><span class="upload-icon">↑</span></label>
+          <input id="portrait" type="file" accept="image/png,image/jpeg,image/webp" hidden />
+          <button class="text-button" id="removePhoto" type="button" hidden>Remove photo</button>
+        </section>
+
+        <section class="preview-panel" aria-label="Live bookmark preview">
+          <div class="preview-heading"><div><p class="eyebrow">Live preview</p><h2>Ready to share</h2></div><span id="saveState">Updates instantly</span></div>
+          <div class="bookmark-stage"><div id="preview" class="bookmark-preview" aria-label="Personalized bookmark preview"></div></div>
+          <p class="preview-note">Preview is scaled. Page 2 of the downloaded PDF is a one-up production file with 0.125-inch bleed on every side.</p>
+        </section>
+
+        <aside class="order-card">
+          <p class="eyebrow">Final step</p>
+          <h2>Download for printing</h2>
+          <p>Your two-page production PDF includes submission instructions followed by the press-ready bookmark.</p>
+          <button class="primary-action" id="downloadPdf" type="button">Download print PDF <span>↓</span></button>
+          <p class="fine-print">Page 2 is 2.75 × 8.25 inches, with a centered 2.5 × 8 inch trim box and full bleed.</p>
+          <div class="quality-check"><span>✓</span><p><strong>Preflight check</strong><br />Instructions, trim size, bleed, and required text are ready.</p></div>
+        </aside>
+      </div>
+    </main>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="src/vendor/pdf-lib.min.js?v=9"></script>
+    <script src="src/assets/template-pdf-data.js?v=9"></script>
+    <script src="src/app.js?v=9"></script>
+  </body>
+</html>

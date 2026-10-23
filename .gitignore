@@ -1,0 +1,11 @@
+.DS_Store
+node_modules/
+.pnpm-store/
+dist/
+tmp/
+output/
+
+# Superseded development exports retained locally for reference.
+src/assets/global-outreach-clean-template.pdf
+src/assets/go-template-base.png
+src/assets/go-template-clean.png
